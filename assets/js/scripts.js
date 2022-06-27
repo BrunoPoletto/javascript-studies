@@ -1,5 +1,8 @@
 var currentNumberWrapper = document.getElementById('currentNumber');
 var currentNumber = 0;
+
+
+
 function increment() {
     currentNumber = currentNumber + 1;
     currentNumberWrapper.innerHTML = currentNumber;
@@ -10,6 +13,8 @@ function decrement() {
     currentNumberWrapper.innerHTML = currentNumber;
 }
 
-if (currentNumberWrapper <= 0) {
-    currentNumberWrapper.innerHTML();
+if (currentNumber < 0 ) {
+    currentNumberWrapper.style.color = "red";
+} else if (currentNumber > 0) {
+    currentNumberWrapper.style.color = "blue";
 }

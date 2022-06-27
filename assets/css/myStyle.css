@@ -1,5 +1,36 @@
+body {
+    display: flex;
+    background-color: blanchedalmond;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #evil {
     font-size:9px;
     color: red;
     opacity: 90%;
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid blueviolet;
+    background-color: aquamarine;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+#counter {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+#currentNumber {
+    display: flex;
+    align-items: center;
 }
