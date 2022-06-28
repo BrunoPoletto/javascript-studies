@@ -1,3 +1,5 @@
+var num1 = document.getElementById("num1");
+var num2 = document.getElementById("num2");
 
 
 function firstSentence (num1, num2) {
@@ -15,20 +17,19 @@ function secondSentence (num1, num2) {
     let biggerThan20 = 'maior';
 
     if (add < 10) {
-        return biggerThan10 = 'menor';
+        biggerThan10 = 'menor';
     }
 
     if (add < 20) {
-        return biggerThan20 = 'menor';
+        biggerThan20 = 'menor';
     }
 
     return `Sua soma é ${add}, que é ${biggerThan10} que 10 e ${biggerThan20} que 20.`;
 }
 
 function comparingNumbers (num1, num2) {
-    let sentences = '';
-    firstSentence(num1, num2);
-    secondSentence(num1, num2);
-    sentences = `$(firstSentence) $(secondSentence)`;
-    return sentences;
+    num1 = document.getElementById("num1");
+    num2 = document.getElementById("num2");
+    let sentences = `${firstSentence(num1, num2)} ${secondSentence(num1, num2)}`;
+    results.innerHTML = sentences;
 }
