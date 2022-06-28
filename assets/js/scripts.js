@@ -18,3 +18,5 @@ if (currentNumber < 0 ) {
 } else if (currentNumber > 0) {
     currentNumberWrapper.style.color = "blue";
 }
+
+(currentNumber < 0) ? (currentNumberWrapper.style.color = "red") : (currentNumberWrapper.style.color = "blue");
