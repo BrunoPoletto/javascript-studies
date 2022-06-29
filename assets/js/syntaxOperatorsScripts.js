@@ -1,36 +1,44 @@
 var num1 = 0
 var num2 = 0
-var add = 0
-
 
 function firstSentence (num1, num2) {
-    let areEquals = '';
 
-    if (num1 !== num2) {
-        areEquals = 'não';
-    } 
-    return `Os numeros ${num1} e ${num2} ${areEquals} são iguais.`;
+    let areEquals = '';
+    
+    (num1 !== num2) ? areEquals = 'not' : '';
+    
+    return `The numbers ${num1} and ${num2} are ${areEquals} equal.`;
 }
 
 function secondSentence (num1, num2) {
-    add = num1 + num2
-    let biggerThan10 = 'maior';
-    let biggerThan20 = 'maior';
+
+    let add = num1 + num2
+    let comparing10 = 'bigger than';
+    let comparing20 = 'bigger than';
 
     if (add < 10) {
-        biggerThan10 = 'menor';
+        comparing10 = 'smaller than';
+    } else if (add = 10) {
+        comparing10 = 'equal to'
     }
 
     if (add < 20) {
-        biggerThan20 = 'menor';
+        comparing20 = 'smaller than';
+    } else if (add = 20) {
+        comparing20 = 'equal to'
     }
 
-    return `Sua soma é ${add}, que é ${biggerThan10} que 10 e ${biggerThan20} que 20.`;
+    return `Their sum is ${add}, which is ${comparing10} 10 and ${comparing20} than 20.`;
 }
 
 function comparingNumbers (num1, num2) {
-    num1 = document.getElementById("num1").value;
-    num2 = document.getElementById("num2").value;
-    let sentences = `${firstSentence(num1, num2)} ${secondSentence(num1, num2)}`;
-    results.innerHTML = sentences;
+    num1 = parseInt(document.getElementById("num1").value);
+    num2 = parseInt(document.getElementById("num2").value);
+    
+    if (!num1 || !num2) {
+        results.innerHTML = "Type in both numbers";
+    } else {
+        let sentences = `${firstSentence(num1, num2)} ${secondSentence(num1, num2)}`;
+        results.innerHTML = sentences;
+    }
 }
