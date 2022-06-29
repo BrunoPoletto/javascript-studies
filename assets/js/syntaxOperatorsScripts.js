@@ -1,5 +1,6 @@
-var num1 = document.getElementById("num1");
-var num2 = document.getElementById("num2");
+var num1 = 0
+var num2 = 0
+var add = 0
 
 
 function firstSentence (num1, num2) {
@@ -12,7 +13,7 @@ function firstSentence (num1, num2) {
 }
 
 function secondSentence (num1, num2) {
-    let add = num1 + num2;
+    add = num1 + num2
     let biggerThan10 = 'maior';
     let biggerThan20 = 'maior';
 
@@ -28,8 +29,8 @@ function secondSentence (num1, num2) {
 }
 
 function comparingNumbers (num1, num2) {
-    num1 = document.getElementById("num1");
-    num2 = document.getElementById("num2");
+    num1 = document.getElementById("num1").value;
+    num2 = document.getElementById("num2").value;
     let sentences = `${firstSentence(num1, num2)} ${secondSentence(num1, num2)}`;
     results.innerHTML = sentences;
 }
