@@ -48,13 +48,6 @@ const ROGUE = {
 
 const DAMAGE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
-const RANDOM_NUMBERS = [123, 234, 56345, 7653, 12341, 567356, 234, 9, 23, 20, 43, 2]
-
-function callback(number) {
-    return number * 2;
-}
-
 function intDmgMulti(number) {
     return number * this.int; 
 }
@@ -69,6 +62,12 @@ console.log(mapObject(DAMAGE));
 
 
 //Array is done.
+const RANDOM_NUMBERS = [123, 234, 56345, 7653, 12341, 567356, 234, 9, 23, 20, 43, 2]
+
+function callback(number) {
+    return number * 2;
+}
+
 function mapArray(array) {
     let results = array.map(callback);
     return results;
